@@ -38,15 +38,11 @@ height:82%;
 </html>
 <script>
 var pageIndex=0;
-const VideoArray=["https://www.youtube.com/channel/UCRnxeVYT5iO05kZsrPcsuOA",
-							"https://www.youtube.com/watch?v=HEN6EF33vJk",
-							"https://www.youtube.com/watch?v=9zNQKzUZgQ8"];
+const VideoArray=["http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+							"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+							"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"];
 	 $(document).ready(function(){
 		
-	    
-		  var vid = document.getElementById("video");
-		  
-		  vid.setAttribute('crossorigin', 'anonymous'); 
 		  $("video").attr("src",VideoArray[pageIndex]);
 		  
 		if(	VideoArray.length > 1)
@@ -63,7 +59,6 @@ const VideoArray=["https://www.youtube.com/channel/UCRnxeVYT5iO05kZsrPcsuOA",
 				$('#prev').show();
 		  $("video").attr("src",VideoArray[pageIndex]);
 		  var vid = document.getElementById("video");
-		  vid.setAttribute('crossorigin', 'anonymous'); 
 		  vid.play(); 
 		});
 		
