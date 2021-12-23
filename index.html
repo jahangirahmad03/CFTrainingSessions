@@ -43,7 +43,13 @@ const VideoArray=["https://www.youtube.com/channel/UCRnxeVYT5iO05kZsrPcsuOA",
 							"https://www.youtube.com/watch?v=9zNQKzUZgQ8"];
 	 $(document).ready(function(){
 		
-	    $("video").attr("src",VideoArray[pageIndex]);
+	    
+		  var vid = document.getElementById("video");
+		  
+		  vid.setAttribute('crossorigin', 'anonymous'); 
+		  vid.type = ' video/mp4; codecs="theora, vorbis" '; 
+		  $("video").attr("src",VideoArray[pageIndex]);
+		  vid.play(); 
 		
 		if(	VideoArray.length > 1)
 			 $('#next').show();
@@ -59,6 +65,7 @@ const VideoArray=["https://www.youtube.com/channel/UCRnxeVYT5iO05kZsrPcsuOA",
 				$('#prev').show();
 		  $("video").attr("src",VideoArray[pageIndex]);
 		  var vid = document.getElementById("video");
+		  vid.setAttribute('crossorigin', 'anonymous'); 
 		  vid.play(); 
 		});
 		
