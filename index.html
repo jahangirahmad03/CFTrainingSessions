@@ -47,10 +47,8 @@ const VideoArray=["https://www.youtube.com/channel/UCRnxeVYT5iO05kZsrPcsuOA",
 		  var vid = document.getElementById("video");
 		  
 		  vid.setAttribute('crossorigin', 'anonymous'); 
-		  vid.type = ' video/mp4; codecs="theora, vorbis" '; 
 		  $("video").attr("src",VideoArray[pageIndex]);
-		  vid.play(); 
-		
+		  
 		if(	VideoArray.length > 1)
 			 $('#next').show();
 			 
